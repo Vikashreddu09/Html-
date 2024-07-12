@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre And Template Tag</title>
+</head>
+<body>
+    <h1>HELLO</h1>
+    <P>Think NeXT IS The Best Training Centre</P>
+    <pre>
+    <p>thinknexttraining
+            thinknexttraining
+                thinknexttraining
+                    thinknexttraining
+    </p>
+    </pre>
+
+    <h1>Template</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ex.</p>
+    <button onclick="showcontent()">Show Button</button>
+
+    <Template>
+        <h2>Image</h2>
+        <img height="200" width="300" src="DSC_2283.JPG" alt="IMage nt shown ">
+    </Template>
+    <script>
+        function showcontent(){
+            var temp = document.getElementsByTagName("template")[0];
+            var clon = temp.content.cloneNode(true);
+            document.body.appendChild(clon);
+        }
+    </script>
+</body>
+</html>
